@@ -25,3 +25,7 @@ API version (convenient for the developer), requests sample time, maximum number
 samples, etc.
 (b) Conguration information should be saved on server as a JSON text le.
 (c) After reloading web page, saved user's settings should be read from the server
+
+
+
+if you look under i added the task pdf
