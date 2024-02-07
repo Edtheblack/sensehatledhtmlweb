@@ -1,30 +1,42 @@
-Create REST client applications for a web browser (Firefox, Chrome, etc.) for embedded system
-measurement data visualization.
-(a) The interface should contain timeseries plots of at least two measurement quantities, e.g.
-angular orientation (RPY) or temperature, pressure and humidity from the Sense Hat add-on.
-Put on the chart all the necessary information for the correct and unambiguous interpretation
-of the data. Use previously prepared graphic interface prototype designs.
-(b) The application should cyclically request data from server and display responses in the form
-of timeseries plot. The sample time should be dened by the user.
-(c) Run and test app on a selected web browser. Make sure the network communication is
-working properly. You can use a physical or virtual embedded device for testing, or a server
-mock in the form of a local CGI script generating random synthetic measurement data.
-2. Expand client application with module (web page) to control user output device (e.g. LED display).
-(a) The interface should allow setting the state of all available user outputs (e.g. the LED matrix
-from the Sense Hat add-on). The interface should clearly communicate whether the current
-user settings correspond to the output states (i.e. whether the user has applied the last
-changes). Use previously prepared graphic interface prototype designs.
-(b) The application should send a request to the server containing control commands. Use an
-adequate HTTP method.
-(c) Run and test app on a selected web browser. Make sure the network communication is
-working properly. You can use a physical or virtual embedded device for testing, or a server
-mock in the form of a local CGI script saving control commands to text le.
-3. Expand your application with a module (web page) to congure and save user settings.
-(a) The conguration page should contain basic application settings, such as port number, server
-API version (convenient for the developer), requests sample time, maximum number of saved
-samples, etc.
-(b) Conguration information should be saved on server as a JSON text le.
-(c) After reloading web page, saved user's settings should be read from the server
+# Embedded System Measurement Data Visualization Web Client
+
+## Overview
+This repository contains the source code for creating REST client applications to visualize measurement data from an embedded system on a web browser (e.g., Firefox, Chrome). The applications are designed to interact with an embedded device or a server mock to retrieve and display measurement data in the form of timeseries plots. Additionally, the client applications include modules for controlling user output devices (e.g., LED display) and configuring user settings.
+
+## Features
+- **Measurement Data Visualization**: Visualize timeseries plots of measurement quantities such as angular orientation (RPY), temperature, pressure, and humidity from the Sense Hat add-on. The interface provides clear and unambiguous interpretation of the data.
+- **Dynamic Data Retrieval**: Cyclically request data from the server and display responses in the form of timeseries plots. Users can define the sample time according to their preferences.
+- **User Output Device Control**: Control the state of user output devices, such as the LED matrix from the Sense Hat add-on. The interface clearly communicates the current user settings and whether they correspond to the output states.
+- **Configuration and Settings**: Configure basic application settings including port number, server API version, request sample time, maximum number of saved samples, etc. User settings are saved on the server as a JSON text file for persistence across sessions.
+
+## Getting Started
+To run the client applications:
+1. Clone this repository to your local machine using `git clone`.
+2. Open the project in your preferred web development environment.
+3. Modify the configuration settings in the appropriate files according to your setup.
+4. Run and test the application on a selected web browser to ensure proper network communication.
+5. Optionally, deploy the application to a physical or virtual embedded device for testing.
+
+## Technologies Used
+- HTML/CSS/JavaScript for frontend development.
+- RESTful API for communication with the server.
+- JSON for storing and retrieving user settings.
+
+## Testing
+The client applications have been tested on various web browsers to ensure compatibility and proper functioning. Additionally, network communication has been thoroughly tested to ensure seamless interaction with the embedded system or server mock.
+
+## Contributors
+- [Rohan Sanki](https://github.com/Edtheblack)
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgments
+- Special thanks to [Dr. D.Luczak] for their valuable contributions and guidance.
+
+---
+
+Feel free to customize this README according to your specific project details and preferences.
 
 
 
